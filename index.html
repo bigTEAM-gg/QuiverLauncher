@@ -9,21 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
   </head>
   <body>
-    <img src="./public/logo192.png" />
-    <h1 style="font-size: 30pt">bigTEAM Arcade Treasures!</h1>
-    <p style="font-size: 25pt">(Select with the d-pad, start with A)</p>
-    <div id="buttons">
-      <button file="./static/sssv/SwordStrikeSpaceVampires.exe" immortal >Sword Strike Space Vampires</button>
-      <button file="./static/thenotsobigescape/tnsbe.exe">The not-so Big Escape</button>
-      <button file="./static/organicgrowth/organic-growth.exe">Organic Growth</button>
-      <button file="./static/wreckening/wreckening.exe">The Wreckening</button>
-      <button file="./static/canwekeepit/Can-we-keep-it.exe">Can We Keep It?</button>
-      <button file="./static/meatboat/meatboat.exe">MEATBOAT</button>
-      <button file="./static/artospass/Arktos Pass.exe">Arktos' Pass</button>
-      <button file="./static/fallofturtlereef/bigTeamBlue.exe">The Fall of Turtle Reef</button>
-      <button file="./static/uberkrieg/Protokrieg_Live.exe">Uberkrieg</button>
+    <div class="content">
+      <img id="biglogo" src="./public/Quiver Top Logo.png" />
+      <div id="buttons">
+        <button file="">Artkos&#8217; Pass</button>
+        <button file="">The Fall of Turtle Reef</button>
+        <button file="">Frog of War</button>
+        <button file="">Shiela the Shackled</button>
+        <button file="">Trailmaster</button>
+      </div>
     </div>
 
+    <img id="cta" src="public/Sign Buddy.png" />
+    <img id="logos" src="public/Feature Logos.png" />
+    <div id="overlay"></div>
     <video id="attract" autoplay loop src="./public/attract.webm">
     </video>
   </body>
@@ -35,15 +34,7 @@
     Array.from(document.querySelectorAll('button')).forEach((b, i) => {
       b.addEventListener('focus', () => {
         attract.currentTime = [
-          t(7, 52),
-          t(4, 54),
-          t(3,52),
-          t(5, 44),
-          t(0, 27),
-          t(2, 48),
-          t(0, 0),
-          t(1, 40),
-          t(6, 38)
+
         ][i];
         attract.play()
       })

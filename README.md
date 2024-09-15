@@ -1,7 +1,5 @@
-# bigLAUNCHER
-Multi-game launcher and idle detector made for [Vancouver Game Garden](https://vangamegarden.com/) (2024)
-
-![](https://raw.githubusercontent.com/bigTEAM-gg/bigLAUNCHER/main/demo.gif)
+# Quiver Launcher
+Multi-game launcher ~~and idle detector~~ made for [The Full Indie Summit](https://fullindiesummit2024.eventbrite.ca/) (2024)
 
 ## Getting Started
 1. `pip install -r requirements.txt`

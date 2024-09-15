@@ -29,8 +29,8 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
-  mainWindow.setFullScreen(true);
+  mainWindow.webContents.openDevTools();
+  // mainWindow.setFullScreen(true);
 };
 
 // This method will be called when Electron has finished
@@ -59,19 +59,18 @@ ipcMain.on('exec', (event, file, immortal) => {
   child = child_process.execFile(file, () => {
     mainWindow.restore()
   })
-  if (!immortal) {
-    monitor = child_process.exec("python " + "static/idlemonitor.py",
-      (err) => {
-        killChild()
-      })
-  }
+  // Disable idle timeout
+  // if (!immortal) {
+  //   monitor = child_process.exec("python " + "static/idlemonitor.py",
+  //     (err) => {
+  //       killChild()
+  //     })
+  // }
 })
 
 // Terminates child process
 function killChild() {
-  child_process.exec('taskkill /F /im Protokrieg_Live.exe')
-  child_process.exec('taskkill /F /im taskkill /F /im bigTeamBlue-Win64-Shipping.exe')
-  child_process.exec('taskkill /F /im SwordStrikeSpaceVampires.exe')
+  // child_process.exec('taskkill /F /im Protokrieg_Live.exe')
   if (child != null && !child.killed) {
     console.log(child.kill())
     mainWindow.restore()

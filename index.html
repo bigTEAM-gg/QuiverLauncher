@@ -12,18 +12,18 @@
     <div class="content">
       <img id="biglogo" src="./public/Quiver Top Logo.png" />
       <div id="buttons">
-        <button file="">Artkos&#8217; Pass</button>
-        <button file="">The Fall of Turtle Reef</button>
-        <button file="">Frog of War</button>
-        <button file="">Shiela the Shackled</button>
-        <button file="">Trailmaster</button>
+        <button file="./static/arktospass/start.exe">Artkos&#8217; Pass</button>
+        <button file="./static/thefallofturtlereef/start.exe">The Fall of Turtle Reef</button>
+        <button file="./static/frogofwar/start.exe">Frog of War</button>
+        <button file="./static/shielatheshackled/start.exe">Shiela the Shackled</button>
+        <button file="./static/thefallofturtlereef/start.exe">Trailmaster</button>
       </div>
     </div>
 
     <img id="cta" src="public/Sign Buddy.png" />
     <img id="logos" src="public/Feature Logos.png" />
     <div id="overlay"></div>
-    <video id="attract" autoplay loop src="./public/attract.webm">
+    <video id="attract" autoplay loop muted src="./public/attract.mp4">
     </video>
   </body>
 
@@ -34,7 +34,11 @@
     Array.from(document.querySelectorAll('button')).forEach((b, i) => {
       b.addEventListener('focus', () => {
         attract.currentTime = [
-
+          t(4.016, 0.0),
+          t(2.0, 0.0),
+          t(0.0, 0.0),
+          t(3.0, 0.0),
+          t(1.0, 0.0),
         ][i];
         attract.play()
       })

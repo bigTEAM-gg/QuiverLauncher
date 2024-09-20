@@ -1,6 +1,6 @@
 {
-  "name": "biglauncher",
-  "productName": "biglauncher",
+  "name": "quiverlauncher",
+  "productName": "quiverlauncher",
   "version": "1.0.0",
   "description": "Launch games and reset when idle is detected",
   "main": "index.js",

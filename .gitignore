@@ -94,4 +94,5 @@ out/
 static/*
 !idlemonitor.py
 !logo192.png
-!attract.webm
+
+attract.mp4

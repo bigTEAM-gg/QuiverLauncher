@@ -29,8 +29,8 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
-  // mainWindow.setFullScreen(true);
+  // mainWindow.webContents.openDevTools();
+  mainWindow.setFullScreen(true);
 };
 
 // This method will be called when Electron has finished
